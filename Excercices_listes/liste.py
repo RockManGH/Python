@@ -35,6 +35,12 @@ print ("\nle chiffre min dans la liste est : {}".format(min(liste1)))
 
 print (" \nla somme de la liste est : {} \n".format(sum(liste1)))
 
-print ("\n chiffre aléatoir de la liste: {}".format(random.choice(liste1)))
+print ("\n chiffre aléatoir de la liste avec choice: {}".format(random.choice(liste1)))
 
-print ("\n ")
+print ("\n chiffre aléatoir de la liste avec randint: {}".format(random.randint(0,len(liste1)-1)))
+
+random.shuffle(liste1)
+print ("\n élément de liste mélanger avec shuffle : {}".format(liste1))
+
+
+print ("\n échantillon de 2 élément de la liste: {}".format(random.sample(liste1,2)))
