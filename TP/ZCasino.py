@@ -129,6 +129,7 @@ while jouer  :
 
 	if jouer.lower() == 'q': 		
 		jouer = False
-	else : jouer = True
+	else :
+		jouer = True
 
 
