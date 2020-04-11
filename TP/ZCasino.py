@@ -76,57 +76,30 @@ while jouer  :
 	else : 
 		print ("\n vous avez perdu")
 
-	# vérifier si le n° choisi fait parti des pairs ou impaire 
-	if (nbruser %2 == 0) :
-		npoim = True
-	else :
-		npoim = False
-
-	# verifier le n° random est paire ou impaire 
-	if (randnbr %2 == 0) :
-		rpoim = True
-	else :
-		rpoim = False
-
-		print (" \nvous avez gagner : ",gain,"$")	
-	else : 
-		print ("\n vous avez perdu")
-
 	npoim = fonction_paire_impaire.paire_impaire(nbruser)	
 	rpoim = fonction_paire_impaire.paire_impaire(randnbr)	
 	
 
-
 	# controler si le n° choisi et le random sont tous les deux paire ou impaire
 	if npoim == rpoim :
-
 		#si oui rendre 50% de la somme misé 
 		nbrmise = nbrmise /2
-
-		#si non solde misée est perdu 
-	else :
-		nbrmise =0
-	#afficher le solde du joueur 
-
 
 		if npoim == True and rpoim == True :
 			print ("le chiffre entrer et le chiffre gagant sont tous les deux des paire, vous garder 50% de votre mise")
 		else :
 			print ("le chiffre entrer et le chiffre gagant sont tous les deux des impaire, vous garder 50% de votre mise")
+
 	#si non solde misée est perdu 
 	else :
 		print ("le chiffre entrer et le chiffre gagant sont des types différents, vous avez tout perdu ")
 		nbrmise =0
 
 	#afficher le solde du joueur 
-
 	print (" \nvotre solde actuelle est: ",nbrmise,"$")
 
 	# proposer de jouer à nouveau ou quitter 
 	jouer = input ("\n pour jouer à nouveau taper entrer si non Q pour quitter :")
-
-	if jouer.lower() == 'q': 		jouer = False
-
 	if jouer.lower() == 'q': 		
 		jouer = False
 	else :
