@@ -91,6 +91,7 @@ while jouer  :
 	jouer = input ("\n pour jouer à nouveau taper entrer si non Q pour quitter :")
 	if jouer.lower() == 'q': 		
 		jouer = False
-	else : jouer = True
+	else :
+		jouer = True
 
 
