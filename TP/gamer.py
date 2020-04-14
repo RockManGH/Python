@@ -1,8 +1,39 @@
 
-gamer = {"name":"", "bet":0,"nbrg":0,"balance":0}
+import pickle
+import pdb
 
-gamer["name"] = input ("entrer votre nom :") 
-gamer ["bet"] = input ("entre votre mise en €:")
 
-print (" Bienvenue {} dans le jeur ZCasino ".format(gamer["name"]))
-print (" vous avez misé la somme de {} €".format(gamer["bet"]))
+#recup nombre dicto in file 
+with open("gamer.txt","rb") as fichier :
+	mpick = pickle.Unpickler(fichier)
+
+	 
+	rept = True
+	i=0
+	while rept == True :	
+		try : 
+			mpick.load()
+		except EOFError:
+			rept = False
+		else :
+			i +=1
+			rept = True	
+
+
+
+#print dicto in file
+with open("gamer.txt","rb") as fichier :
+	mpick = pickle.Unpickler(fichier)
+	n=1			
+	while n<=i:
+
+		try:
+			recup = mpick.load()
+		except EOFError:
+			break
+		else :
+			for k,v in recup.items() :
+				print (k,v)	
+			pass
+			
+		

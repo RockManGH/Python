@@ -1,4 +1,7 @@
 import random
+import pickle
+import fonction_history
+
 
 
 def paire_impaire (nbr):
@@ -9,9 +12,9 @@ def paire_impaire (nbr):
 		nbr = False
 	return (nbr)
 
-def randnbr(nbr) :
+def randnbr() :
 	"""Fonction for return a random nombre"""
-	randnbr = random.randint(0,nbr)
+	randnbr = random.randint(0,5)
 	return randnbr
 
 def controle_int(nbr):
@@ -24,10 +27,9 @@ def controle_int(nbr):
 		return True	
 
 def controle_nbruser(nbr):
-	""" fonction for controle usernbr between 0 and 10 """
-	try :
-		 nbr > 0 and nbr <= 10
-	except ValueError :
-		print ("Merci de saisir un chiffre entre 0 et 10 ")
+	""" fonction for controle usernbr between 0 and 5 """
+	if nbr < 0 or nbr > 5 :
+		print ("\nMerci de saisir un chiffre entre 0 et 5\n ")
 	else :
 		return True
+
